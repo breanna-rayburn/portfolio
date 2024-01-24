@@ -1,9 +1,9 @@
 import '@/styles/globals.css'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import type { Metadata } from 'next'
 import { Josefin_Sans } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Josefin_Sans({ subsets: ['latin'] })
 
