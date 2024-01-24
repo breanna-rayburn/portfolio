@@ -18,7 +18,7 @@ export default function Home() {
             development, I&apos;m on an exciting journey toward becoming a
             full-stack developer.
           </p>
-          <div className="grid grid-cols-2 lg:grid-cols-4">
+          <div className="mt-4 grid grid-cols-2 md:grid-cols-4">
             <IconCard src="/imgs/icons/react.svg" alt="React" />
             <IconCard src="/imgs/icons/javascript.svg" alt="Javascript" />
             <IconCard src="/imgs/icons/typescript.svg" alt="TypeScript" />
@@ -31,13 +31,13 @@ export default function Home() {
         </div>
         <div className="text-center">image of me</div>
       </section>
-      <section className="flex items-center justify-center">
+      <section className="mt-6 flex items-center justify-center">
         <h2 className="text-6xl">Professional Projects</h2>
       </section>
-      <section className="flex items-center justify-center">
+      <section className="mt-6 flex items-center justify-center">
         <h2 className="text-6xl">Personal Projects</h2>
       </section>
-      <section className="flex items-center justify-center">
+      <section className="mt-6 flex items-center justify-center">
         <h2 className="text-6xl">Lets Connect!</h2>
       </section>
     </main>
