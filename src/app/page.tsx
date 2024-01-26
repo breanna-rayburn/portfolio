@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import IconCard from '@/components/IconCard'
 import Portrait from '@/public/imgs/portrait.jpg'
+import ProjectCard from '@/components/ProjectCard'
 
 export default function Home() {
   return (
@@ -41,6 +42,10 @@ export default function Home() {
       </section>
       <section className="mt-24 flex items-center justify-center">
         <h2 className="text-center text-6xl">Professional Projects</h2>
+        {/* <ProjectCard
+          href="https://barnesweldingsupply.com"
+          name="Barnes Welding Supply"
+        /> */}
       </section>
       <section className="mt-24 flex items-center justify-center">
         <h2 className="text-center text-6xl">Personal Projects</h2>
