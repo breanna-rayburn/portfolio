@@ -63,9 +63,6 @@ export default function Home() {
           />
         </div>
       </section>
-      {/* <section className="mt-24 flex items-center justify-center">
-        <h2 className="text-center text-6xl">Personal Projects</h2>
-      </section> */}
       <section className="mt-24 flex flex-col items-center justify-center">
         <h2 className="text-center text-6xl">Let&apos;s Connect!</h2>
         <p className="text-center">
@@ -77,7 +74,7 @@ export default function Home() {
           through the provided channels below. Looking forward to connecting
           with you!
         </p>
-        <div className="grid grid-cols-2">
+        <div className="mt-4 grid grid-cols-2">
           <a
             href="https://www.linkedin.com/in/breanna-rayburn/"
             target="_blank"
