@@ -3,11 +3,6 @@
 import { Variants, motion } from 'framer-motion'
 
 export default function AnimatedTitle({ text }: { text: string }) {
-  const titleAnimation: Variants = {
-    initial: {},
-    animate: {},
-  }
-
   const wordAnimation: Variants = {
     initial: {},
     animate: {},
@@ -29,33 +24,39 @@ export default function AnimatedTitle({ text }: { text: string }) {
   }
 
   return (
-    <motion.h1 aria-label={text} className="text-8xl" variants={titleAnimation}>
-      {text.split(' ').map((word, i) => {
-        return (
-          <motion.span
-            key={i}
-            aria-hidden="true"
-            variants={wordAnimation}
-            transition={{
-              delayChildren: i * 0.25,
-              staggerChildren: 0.05,
-            }}
-            className="inline-block whitespace-nowrap md:first:mr-4"
-          >
-            {word.split('').map((character, i) => {
-              return (
-                <motion.span
-                  key={i}
-                  aria-hidden="true"
-                  variants={characterAnimation}
-                  className="inline-block"
-                >
-                  {character}
-                </motion.span>
-              )
-            })}
-          </motion.span>
-        )
+    <motion.h1 aria-label={text} className="text-8xl" variants={wordAnimation}>
+      {text.split(/(\s+)/).map((word, i) => {
+        {
+          return word.trim() ? (
+            <motion.span
+              key={i}
+              aria-hidden="true"
+              variants={wordAnimation}
+              transition={{
+                delayChildren: i * 0.25,
+                staggerChildren: 0.05,
+              }}
+              className="inline-block whitespace-nowrap"
+            >
+              {word.split('').map((character, i) => {
+                return (
+                  <motion.span
+                    key={i}
+                    aria-hidden="true"
+                    variants={characterAnimation}
+                    className="inline-block"
+                  >
+                    {character}
+                  </motion.span>
+                )
+              })}
+            </motion.span>
+          ) : (
+            <span key={i} className="inline" aria-hidden="true">
+              {' '}
+            </span>
+          )
+        }
       })}
     </motion.h1>
   )
