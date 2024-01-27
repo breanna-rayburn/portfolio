@@ -1,7 +1,10 @@
 import Image from 'next/image'
 import IconCard from '@/components/IconCard'
-import Portrait from '@/public/imgs/portrait.jpg'
 import ProjectCard from '@/components/ProjectCard'
+import Portrait from '@/public/imgs/portrait.jpg'
+import BarnesWelding from '@/public/imgs/previews/BarnesWelding.png'
+import BarnesSpecialty from '@/public/imgs/previews/BarnesSpecialty.png'
+import TapsCO2 from '@/public/imgs/previews/TapsCO2.png'
 
 export default function Home() {
   return (
@@ -12,7 +15,7 @@ export default function Home() {
           <h3 className="text-4xl">Front-End Web Developer</h3>
         </div>
       </section>
-      <section className="grid grid-cols-1 items-center md:grid-cols-2">
+      <section className="grid grid-cols-1 md:grid-cols-2">
         <div>
           <h2 className="text-6xl">Crafting Experiences</h2>
           <p>
@@ -40,18 +43,51 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="mt-24 flex items-center justify-center">
-        <h2 className="text-center text-6xl">Professional Projects</h2>
-        {/* <ProjectCard
-          href="https://barnesweldingsupply.com"
-          name="Barnes Welding Supply"
-        /> */}
+      <section className="mt-24 flex flex-col items-center justify-center">
+        <h2 className="mb-12 text-center text-6xl">Professional Work</h2>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+          <ProjectCard
+            href="https://barnesweldingsupply.com"
+            src={BarnesWelding}
+            name="Barnes Welding Supply"
+          />
+          <ProjectCard
+            href="https://barnesspecialtygases.com"
+            src={BarnesSpecialty}
+            name="Barnes Specialty Gases"
+          />
+          <ProjectCard
+            href="https://tapsco2.com"
+            src={TapsCO2}
+            name="TapsCO2"
+          />
+        </div>
       </section>
-      <section className="mt-24 flex items-center justify-center">
+      {/* <section className="mt-24 flex items-center justify-center">
         <h2 className="text-center text-6xl">Personal Projects</h2>
-      </section>
-      <section className="mt-24 flex items-center justify-center">
-        <h2 className="text-center text-6xl">Lets Connect!</h2>
+      </section> */}
+      <section className="mt-24 flex flex-col items-center justify-center">
+        <h2 className="text-center text-6xl">Let&apos;s Connect!</h2>
+        <p className="text-center">
+          I&apos;m always eager to connect with fellow developers, creators, and
+          potential collaborators! Whether you have an exciting project in mind,
+          want to discuss the latest trends in web development, or share
+          insights, I&apos;d love to hear from you. Let&apos;s build a network
+          where ideas flow, and creativity thrives. Feel free to reach out
+          through the provided channels below. Looking forward to connecting
+          with you!
+        </p>
+        <div className="grid grid-cols-2">
+          <a
+            href="https://www.linkedin.com/in/breanna-rayburn/"
+            target="_blank"
+          >
+            <IconCard src="/imgs/icons/linkedin.svg" alt="Linkedin" />
+          </a>
+          <a href="https://github.com/breanna-rayburn" target="_blank">
+            <IconCard src="/imgs/icons/github.svg" alt="GitHub" />
+          </a>
+        </div>
       </section>
     </main>
   )
