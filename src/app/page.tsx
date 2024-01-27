@@ -5,17 +5,22 @@ import Portrait from '@/public/imgs/portrait.jpg'
 import BarnesWelding from '@/public/imgs/previews/BarnesWelding.png'
 import BarnesSpecialty from '@/public/imgs/previews/BarnesSpecialty.png'
 import TapsCO2 from '@/public/imgs/previews/TapsCO2.png'
+import AnimatedTitle from '@/components/AnimatedTitle'
+import AnimatedText from '@/components/AnimatedText'
+import StaggerWrapper from '@/components/StaggerWrapper'
+import AnimatedChevron from '@/components/AnimatedChevron'
 
 export default function Home() {
   return (
     <main className="container mx-auto max-w-7xl flex-grow px-6">
-      <section className="flex min-h-screen items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-8xl">Breanna Rayburn</h1>
-          <h3 className="text-4xl">Front-End Web Developer</h3>
-        </div>
+      <section className="flex min-h-screen items-center justify-center text-center">
+        <StaggerWrapper>
+          <AnimatedTitle text="Breanna Rayburn" />
+          <AnimatedText text="Front-End Web Developer" />
+          <AnimatedChevron href="#scroll-down" />
+        </StaggerWrapper>
       </section>
-      <section className="grid grid-cols-1 md:grid-cols-2">
+      <section className="grid grid-cols-1 md:grid-cols-2" id="scroll-down">
         <div className="flex flex-col justify-center">
           <h2 className="text-6xl">Crafting Experiences</h2>
           <p>
