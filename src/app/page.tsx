@@ -16,7 +16,7 @@ export default function Home() {
         </div>
       </section>
       <section className="grid grid-cols-1 md:grid-cols-2">
-        <div>
+        <div className="flex flex-col justify-center">
           <h2 className="text-6xl">Crafting Experiences</h2>
           <p>
             I&apos;m passionate about creating impactful digital experiences
@@ -35,7 +35,7 @@ export default function Home() {
             <IconCard src="/imgs/icons/graphql.svg" alt="GraphQL" />
           </div>
         </div>
-        <div className="hidden items-center justify-center md:flex">
+        <div className="hidden justify-center md:flex">
           <Image
             src={Portrait}
             alt="Self Portrait"
