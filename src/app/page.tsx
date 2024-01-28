@@ -20,7 +20,10 @@ export default function Home() {
           <AnimatedChevron href="#scroll-down" />
         </StaggerWrapper>
       </section>
-      <section className="grid grid-cols-1 md:grid-cols-2" id="scroll-down">
+      <section
+        className="grid grid-cols-1 pt-12 md:grid-cols-2 md:pt-24"
+        id="scroll-down"
+      >
         <div className="flex flex-col justify-center">
           <h2 className="text-6xl">Crafting Experiences</h2>
           <p>
@@ -48,7 +51,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="mt-24 flex flex-col items-center justify-center">
+      <section className="mt-12 flex flex-col items-center justify-center md:mt-24">
         <h2 className="mb-12 text-center text-6xl">Professional Work</h2>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <ProjectCard
@@ -68,7 +71,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="mt-24 flex flex-col items-center justify-center">
+      <section className="my-12 flex flex-col items-center justify-center md:my-24">
         <h2 className="text-center text-6xl">Let&apos;s Connect!</h2>
         <p className="text-center">
           I&apos;m always eager to connect with fellow developers, creators, and

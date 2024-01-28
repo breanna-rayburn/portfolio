@@ -20,18 +20,19 @@ export default function AnimatedChevron({ href }: { href: string }) {
   }
 
   return (
-    <motion.a
-      href={href}
+    <motion.div
       className="absolute bottom-0 left-0 right-0 mx-auto flex justify-center"
       variants={chevronAnimation}
     >
-      <Image
-        className=""
-        src="/imgs/icons/chevronDown.svg"
-        alt="Jump To"
-        height={50}
-        width={50}
-      />
-    </motion.a>
+      <a href={href}>
+        <Image
+          className=""
+          src="/imgs/icons/chevronDown.svg"
+          alt="Jump To"
+          height={50}
+          width={50}
+        />
+      </a>
+    </motion.div>
   )
 }
