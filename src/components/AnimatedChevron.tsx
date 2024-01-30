@@ -24,7 +24,11 @@ export default function AnimatedChevron({ href }: { href: string }) {
       className="absolute bottom-0 left-0 right-0 mx-auto flex justify-center "
       variants={chevronAnimation}
     >
-      <a href={href}>
+      <motion.a
+        href={href}
+        whileHover={{ scale: 1.1 }}
+        transition={{ type: 'spring', stiffness: 400, damping: 10 }}
+      >
         <Image
           className=""
           src="/imgs/icons/chevronDown.svg"
@@ -32,7 +36,7 @@ export default function AnimatedChevron({ href }: { href: string }) {
           height={50}
           width={50}
         />
-      </a>
+      </motion.a>
     </motion.div>
   )
 }
