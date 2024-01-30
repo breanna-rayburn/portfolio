@@ -1,14 +1,25 @@
 'use client'
 
 import { Variants, motion } from 'framer-motion'
+import Typography from './Typography'
 
-export default function AnimatedText({ text }: { text: string }) {
+type TextVariants = 'h3' | 'p'
+
+export default function AnimatedText({
+  text,
+  tag,
+}: {
+  text: string
+  tag: TextVariants
+}) {
+  const MotionTypography = motion(Typography)
+
   const characterAnimation: Variants = {
-    initial: {
+    hidden: {
       opacity: 0,
       y: `0.25em`,
     },
-    animate: {
+    visible: {
       opacity: 1,
       y: `0em`,
       transition: {
@@ -19,8 +30,8 @@ export default function AnimatedText({ text }: { text: string }) {
   }
 
   return (
-    <motion.p variants={characterAnimation} className="text-4xl">
+    <MotionTypography tag={tag} variants={characterAnimation}>
       {text}
-    </motion.p>
+    </MotionTypography>
   )
 }

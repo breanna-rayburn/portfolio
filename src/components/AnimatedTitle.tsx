@@ -1,19 +1,30 @@
 'use client'
 
 import { Variants, motion } from 'framer-motion'
+import Typography from './Typography'
 
-export default function AnimatedTitle({ text }: { text: string }) {
+type TitleVarients = 'h1' | 'h2'
+
+export default function AnimatedTitle({
+  text,
+  tag,
+}: {
+  text: string
+  tag: TitleVarients
+}) {
+  const MotionTypography = motion(Typography)
+
   const wordAnimation: Variants = {
-    initial: {},
-    animate: {},
+    hidden: {},
+    visible: {},
   }
 
   const characterAnimation: Variants = {
-    initial: {
+    hidden: {
       opacity: 0,
       y: `0.25em`,
     },
-    animate: {
+    visible: {
       opacity: 1,
       y: `0em`,
       transition: {
@@ -24,7 +35,7 @@ export default function AnimatedTitle({ text }: { text: string }) {
   }
 
   return (
-    <motion.h1 aria-label={text} className="text-8xl" variants={wordAnimation}>
+    <MotionTypography aria-label={text} variants={wordAnimation} tag={tag}>
       {text.split(/(\s+)/).map((word, i) => {
         {
           return word.trim() ? (
@@ -58,6 +69,6 @@ export default function AnimatedTitle({ text }: { text: string }) {
           )
         }
       })}
-    </motion.h1>
+    </MotionTypography>
   )
 }

@@ -4,15 +4,15 @@ import { motion } from 'framer-motion'
 
 export default function StaggerWrapper({ children }: { children: any }) {
   const wrapperAnimation = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { staggerChildren: 1 } },
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { staggerChildren: 1 } },
   }
+
   return (
     <motion.div
       whileInView="visible"
-      viewport={{ once: true }}
-      initial="initial"
-      animate="animate"
+      viewport={{ once: true, margin: '-200px 0px' }}
+      initial="hidden"
       variants={wrapperAnimation}
     >
       {children}

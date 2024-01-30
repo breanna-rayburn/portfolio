@@ -5,11 +5,11 @@ import { Variants, motion } from 'framer-motion'
 
 export default function AnimatedChevron({ href }: { href: string }) {
   const chevronAnimation: Variants = {
-    initial: {
+    hidden: {
       opacity: 0,
       y: `-1em`,
     },
-    animate: {
+    visible: {
       opacity: 1,
       y: `0em`,
       transition: {
@@ -21,7 +21,7 @@ export default function AnimatedChevron({ href }: { href: string }) {
 
   return (
     <motion.div
-      className="absolute bottom-0 left-0 right-0 mx-auto flex justify-center"
+      className="absolute bottom-0 left-0 right-0 mx-auto flex justify-center "
       variants={chevronAnimation}
     >
       <a href={href}>
