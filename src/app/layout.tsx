@@ -1,6 +1,7 @@
 import '@/styles/globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import Nav from '@/components/Nav'
 
 import type { Metadata } from 'next'
 import { Josefin_Sans } from 'next/font/google'
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
+        <Nav />
         <Analytics />
         <SpeedInsights />
       </body>
