@@ -11,6 +11,8 @@ export default function CircularProgress() {
         pathLength="1"
         stroke="none"
         strokeWidth="3%"
+        fill="white"
+        opacity="0.5"
       />
       <motion.circle
         cx="50"
