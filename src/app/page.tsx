@@ -9,8 +9,7 @@ import AnimatedTitle from '@/components/AnimatedTitle'
 import AnimatedText from '@/components/AnimatedText'
 import StaggerWrapper from '@/components/StaggerWrapper'
 import AnimatedChevron from '@/components/AnimatedChevron'
-import AnimatedWrapper from '@/components/AnimatedWrapper'
-import { Amiko } from 'next/font/google'
+import AnimatedSection from '@/components/AnimatedSection'
 
 export default function Home() {
   return (
@@ -34,7 +33,7 @@ export default function Home() {
               front-end development, I'm on an exciting journey toward
               becoming a full-stack developer."
               />
-              <AnimatedWrapper>
+              <AnimatedSection>
                 <div className="mt-4 grid grid-cols-2 md:grid-cols-4">
                   <IconCard src="/imgs/icons/javascript.svg" alt="Javascript" />
                   <IconCard src="/imgs/icons/typescript.svg" alt="TypeScript" />
@@ -48,16 +47,16 @@ export default function Home() {
                   <IconCard src="/imgs/icons/postgresql.svg" alt="PostgreSQL" />
                   <IconCard src="/imgs/icons/graphql.svg" alt="GraphQL" />
                 </div>
-              </AnimatedWrapper>
+              </AnimatedSection>
             </div>
             <div className="hidden justify-center md:flex">
-              <AnimatedWrapper>
+              <AnimatedSection>
                 <Image
                   src={Portrait}
                   alt="Self Portrait"
                   style={{ width: '400px' }}
                 />
-              </AnimatedWrapper>
+              </AnimatedSection>
             </div>
           </div>
         </StaggerWrapper>
@@ -67,7 +66,7 @@ export default function Home() {
           <div className="mb-12 text-center">
             <AnimatedTitle tag="h2" text="Professional Work" />
           </div>
-          <AnimatedWrapper>
+          <AnimatedSection>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               <ProjectCard
                 href="https://barnesweldingsupply.com"
@@ -85,7 +84,7 @@ export default function Home() {
                 name="TapsCO2"
               />
             </div>
-          </AnimatedWrapper>
+          </AnimatedSection>
         </StaggerWrapper>
       </section>
       <section className="my-12 flex flex-col items-center justify-center text-center md:my-24">
@@ -101,7 +100,7 @@ export default function Home() {
             through the provided channels below. Looking forward to connecting
             with you!"
           />
-          <AnimatedWrapper>
+          <AnimatedSection>
             <div className="mt-4 items-center justify-center">
               <a
                 className="inline-block"
@@ -118,7 +117,7 @@ export default function Home() {
                 <IconCard src="/imgs/icons/github.svg" alt="GitHub" />
               </a>
             </div>
-          </AnimatedWrapper>
+          </AnimatedSection>
         </StaggerWrapper>
       </section>
     </main>

@@ -2,7 +2,7 @@
 
 import { Variants, motion } from 'framer-motion'
 
-export default function AnimatedText({ children }: { children: any }) {
+export default function AnimatedSection({ children }: { children: any }) {
   const characterAnimation: Variants = {
     hidden: {
       opacity: 0,
