@@ -26,14 +26,13 @@ export default function Home() {
           <div className="grid grid-cols-1 pt-12 md:grid-cols-2">
             <div className="flex flex-col justify-center">
               <AnimatedTitle tag="h2" text="Crafting Experiences" />
-              <AnimatedText
-                tag="p"
-                text="I'm passionate about creating impactful digital experiences
-              with an emphasis on responsiveness and performance. Beyond
-              front-end development, I'm on an exciting journey toward
-              becoming a full-stack developer."
-              />
               <AnimatedSection>
+                <p>
+                  I&apos;m passionate about creating impactful digital
+                  experiences with an emphasis on responsiveness and
+                  performance. Beyond front-end development, I&apos;m on an
+                  exciting journey toward becoming a full-stack developer.
+                </p>
                 <div className="mt-4 grid grid-cols-2 md:grid-cols-4">
                   <IconCard src="/imgs/icons/javascript.svg" alt="Javascript" />
                   <IconCard src="/imgs/icons/typescript.svg" alt="TypeScript" />
@@ -90,17 +89,16 @@ export default function Home() {
       <section className="my-12 flex flex-col items-center justify-center text-center md:my-24">
         <StaggerWrapper>
           <AnimatedTitle tag="h2" text="Let's Connect!" />
-          <AnimatedText
-            tag="p"
-            text="I'm always eager to connect with fellow developers, creators,
-            and potential collaborators! Whether you have an exciting project in
-            mind, want to discuss the latest trends in web development, or share
-            insights, I'd love to hear from you. Let's build a network
-            where ideas flow, and creativity thrives. Feel free to reach out
-            through the provided channels below. Looking forward to connecting
-            with you!"
-          />
           <AnimatedSection>
+            <p>
+              I&apos;m always open to exciting opportunities for collaboration
+              and potential work projects! Whether you&apos;re looking for a
+              passionate developer to join your team, need assistance on a
+              project, or simply want to discuss ideas, I&apos;m here to help.
+              Let&apos;s explore how we can work together to bring your vision
+              to life. Feel free to reach out through the provided channels
+              below. Looking forward to connecting with you!
+            </p>
             <div className="mt-4 items-center justify-center">
               <a
                 className="inline-block"

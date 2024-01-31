@@ -1,7 +1,6 @@
 import '@/styles/globals.css'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import Nav from '@/components/Nav'
 
 import type { Metadata } from 'next'
 import { Josefin_Sans } from 'next/font/google'
@@ -10,7 +9,8 @@ const inter = Josefin_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Breanna Rayburn',
-  description: 'This is my portfolio',
+  description:
+    'Passionate front-end web developer dedicated to crafting impactful digital experiences with a focus on responsiveness and performance. Lets collaborate on your next project today!',
   icons: [
     {
       rel: 'icon',
@@ -28,7 +28,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         {children}
-        <Nav />
         <Analytics />
         <SpeedInsights />
       </body>
